@@ -1,9 +1,24 @@
 <?php
+/**
+ * Define la clase Header, responsable de renderizar la cabecera de la página web.
+ *
+ * Este script genera la sección superior completa del documento HTML, incluyendo
+ * la etiqueta <head>, la barra de navegación y un carrusel de imágenes.
+ *
+ * @package    Botiga
+ * @author     cristinalopezmontalvo
+ * @version    1.0
+ */
 
 class Header {
     
-    // Método para mostrar el encabezado
-    public function mostrarHeader() {
+    /**
+     * Imprime en la salida estándar todo el código HTML de la cabecera.
+     *
+     * Genera desde la declaración DOCTYPE hasta el final de la sección del carrusel,
+     * incluyendo el <head> con metadatos y CSS, la barra de navegación y el carrusel.
+     * @return void Este método no retorna ningún valor; imprime el HTML directamente en la salida.
+     */    public function mostrarHeader() {
         // Imprime la estructura básica de un documento HTML con el encabezado y los estilos
         echo '<!DOCTYPE html>
               <html lang="es">

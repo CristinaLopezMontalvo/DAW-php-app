@@ -3,9 +3,28 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Clase Principal
+ * 
+ * Esta clase se encarga de mostrar la lista de productos disponibles
+ * en la base de datos. Utiliza Bootstrap para el diseño visual y 
+ * permite modificar o eliminar productos.
+ * 
+ * @package    Botiga
+ */
 class Principal {
     
     // Método para mostrar la lista de productos
+    /**
+     * Muestra la lista de productos en formato HTML.
+     * 
+     * - Conecta con la base de datos usando la clase Connexio.
+     * - Realiza una consulta para obtener los productos con su categoría.
+     * - Muestra los resultados en una tabla estilizada con Bootstrap.
+     * - Incluye botones para modificar o eliminar cada producto.
+     *
+     * @return void
+     */
     public function mostrarProductes() {
         // Obtiene la conexión a la base de datos
         $conexionObj = new Connexio();
@@ -78,7 +97,7 @@ class Principal {
     }
 }
 
-// Crea una instancia de la clase Principal y llama al método mostrarProductes
+// Instancia la clase y muestra los productos
 $listaProductos = new Principal();
 $listaProductos->mostrarProductes();
 

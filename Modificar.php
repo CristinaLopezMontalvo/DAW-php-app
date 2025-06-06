@@ -3,9 +3,29 @@
 require_once('Connexio.php');
 require_once('Header.php');
 
+/**
+ * Define la clase Modificar, responsable de mostrar un formulario para editar un producto.
+ *
+ * Este script recupera los datos de un producto específico de la base de datos
+ * y los presenta en un formulario HTML pre-rellenado para que el usuario
+ * pueda realizar cambios.
+ *
+ * @package    Botiga
+ * @author     cristinalopezmontalvo
+ * @version    1.0
+ */
 class Modificar {
 
-    // Método para mostrar el formulario de modificación del producto
+        /**
+     * Muestra una página HTML con un formulario para modificar un producto.
+     *
+     * Valida el ID del producto, consulta la base de datos para obtener sus
+     * datos actuales y, si existe, genera un formulario HTML con los valores
+     * pre-rellenados. El formulario enviará los datos a `Actualitzar.php`.
+     *
+     * @param int|null $id El ID del producto que se desea modificar.
+     * @return void        Este método no retorna ningún valor; imprime la página HTML directamente en la salida.
+     */
     public function mostrarFormulari($id) {
         // Verifica si el ID del producto es válido
         if (!isset($id) || !is_numeric($id)) {
