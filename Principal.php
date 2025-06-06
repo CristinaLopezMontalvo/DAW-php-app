@@ -10,7 +10,7 @@ require_once('Header.php');
  * en la base de datos. Utiliza Bootstrap para el diseño visual y 
  * permite modificar o eliminar productos.
  * 
- * @package DAW-php-app
+ * @package    Botiga
  */
 class Principal {
     
@@ -97,7 +97,7 @@ class Principal {
     }
 }
 
-// Crea una instancia de la clase Principal y llama al método mostrarProductes
+// Instancia la clase y muestra los productos
 $listaProductos = new Principal();
 $listaProductos->mostrarProductes();
 
